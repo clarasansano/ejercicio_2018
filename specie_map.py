@@ -30,9 +30,9 @@ feature_group = folium.FeatureGroup('Ocurrences')
 
 # MODIFICABLE
 for lon1, lat1, dates1 in zip(lon1, lat1, dates1):
-    feature_group.add_child(folium.CircleMarker(radius=1,location=[lat1, lon1], popup=dates1, color='#cc3186', fill_color='#cc3186'))
+    feature_group.add_child(folium.CircleMarker(radius=1,location=[lat1, lon1], popup=dates1, color='#040102', fill_color='#cc3186'))
 for lon2, lat2, dates2 in zip(lon2, lat2, dates2):
-    feature_group.add_child(folium.RegularPolygonMarker(location=[lat2, lon2], popup=dates2, color='#7bde43', fill_color='#7bde43', radius=1))
+    feature_group.add_child(folium.RegularPolygonMarker(location=[lat2, lon2], popup=dates2, color='#040102', fill_color='#7bde43', radius=1))
 # Se incorporan los puntos al mapa
 m.add_child(feature_group)
 
