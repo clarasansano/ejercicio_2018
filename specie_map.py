@@ -7,14 +7,17 @@ import folium
 # Debeis descargaros un fichero csv con un conjunto de registros (records) de una especie
 # desde la pagina del OBIS: http://www.iobis.org y leerla en un DataFrame de pandas
 # que se llame specie con pd.read_csv
-specie = 
+specie1 =pd.read_csv('Aureliaaurita.csv') 
+specie2=pd.read_csv('Cothilorizatuberculata.csv')
 
 # Lectura de latitud y longitud de las observaciones
-lon, lat = specie['decimalLongitude'], specie['decimalLatitude']
+lon1, lat1 = specie1['decimalLongitude'], specie1['decimalLatitude']
+lon2, lat2 = specie2 ['decimalLongitude'], specie2['decimalLatitude']
 
 # MODIFICABLE
 # Lectura de datos adicionales (se deben convertir a cadena para visualizarlos)
-dates = specie['eventDate'].astype('str')
+dates1 = specie1['eventDate'].astype('str')
+dates2 = specie2['eventDate'].astype('str')
 
 # MODIFICABLE
 # Opciones de visualizacion de la especie
