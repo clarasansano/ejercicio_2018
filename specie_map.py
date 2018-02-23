@@ -29,9 +29,10 @@ m = folium.Map(location=[50, 10], zoom_start=4, tiles='Stamen Watercolor')
 feature_group = folium.FeatureGroup('Ocurrences')
 
 # MODIFICABLE
-for lon, lat, date in zip(lon, lat, dates):
-    feature_group.add_child(folium.Marker(location=[lat, lon], popup=date))
-
+for lon1, lat1, dates1 in zip(lon1, lat1, dates1):
+    feature_group.add_child(folium.Marker(location=[lat1, lon1], popup=dates1))
+for lon2, lat2, dates2 in zip(lon2, lat2, dates2):
+    feature_group.add_child(folium.Marker(location=[lat2, lon2], popup=dates2))
 # Se incorporan los puntos al mapa
 m.add_child(feature_group)
 
