@@ -23,7 +23,7 @@ dates2 = specie2['eventDate'].astype('str')
 # Opciones de visualizacion de la especie
 # Debeis ajustar las coordenadas y el zoom del mapa a la localizacion de la especie
 # Muchas mas en: http://python-visualization.github.io/folium/docs-v0.5.0/modules.html
-m = folium.Map(location=[50, 10], zoom_start=2, tiles='Stamen Watercolor')
+m = folium.Map(location=[50, 10], zoom_start=1, tiles='Stamen Watercolor')
 
 # Creacion del conjunto de puntos
 feature_group = folium.FeatureGroup('Ocurrences')
@@ -37,4 +37,4 @@ for lon2, lat2, dates2 in zip(lon2, lat2, dates2):
 m.add_child(feature_group)
 
 # Se guarda el mapa como una pagina web
-m.save('mapaprueba.html')
+m.save('mapa1.html')
